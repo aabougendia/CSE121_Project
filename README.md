@@ -40,7 +40,6 @@ The Country Guessing Game is implemented using C programming language. The proje
 - Binary Tree
 - FILE I/O
 
-Or use <a href="https://github.com/cesarferreira/dryrun" target="_blank">`dryrun`</a> by <a href="https://github.com/cesarferreira" target="_blank">@CesarFerreira</a>
 
 <h2>Contributing</h2>
 If you're interested in contributing to the project, feel free to fork the repository, make improvements, and submit a pull request. We welcome contributions that enhance the game's content, functionality, or overall user experience.
