@@ -1,4 +1,4 @@
-<div align="center"><img src="app/src/main/res/mipmap-xhdpi/ic_launcher.png"></div>
+<div align="center"><img src="C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\mark_13000428.png"></div>
 <h1 align="center">Name</h1>
 <p align="center"><strong>Description</strong>
 <br>Comment</p>
