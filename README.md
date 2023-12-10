@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 <div align="center"><img src="C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\mark_13000428.png"></div>
 <h1 align="center">Name</h1>
 <p align="center"><strong>Description</strong>
 <br>Comment</p>
+=======
+<div align="center"><img src="app/src/main/res/mipmap-xhdpi/mark_13000428.png"></div>
+<h1 align="center">Country-guessing-game Project</h1>
+>>>>>>> 73e041156992759b7baa07ffb7d3327a609a8c66
 <br/>
 <div align="center"><img src="demo.gif"></img></div>
 <h2>About</h2>
