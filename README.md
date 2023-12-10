@@ -1,7 +1,5 @@
-<div align="center"><img src="app/src/main/res/mipmap-xhdpi/ic_launcher.png"></div>
-<h1 align="center">Name</h1>
-<p align="center"><strong>Description</strong>
-<br>Comment</p>
+<div align="center"><img src="app/src/main/res/mipmap-xhdpi/mark_13000428.png"></div>
+<h1 align="center">Country-guessing-game Project</h1>
 <br/>
 <div align="center"><img src="demo.gif"></img></div>
 <h2>About</h2>
