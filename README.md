@@ -1,4 +1,4 @@
-<div align="center"><img src="https://github.com/aabougendia/CSE121_Project/blob/main/mark_13000428.png?raw=true"></div>
+<div align="center"><img src="https://cdn-icons-png.flaticon.com/256/13000/13000428.png?uid=R130293465&ga=GA1.1.913692944.1702067159&semt=ais"></div>
 <h1 align="center">Country-guessing-game</h1>
 <p align="center"><strong>Description</strong>
 <br/>
