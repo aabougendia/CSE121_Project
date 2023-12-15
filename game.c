@@ -7,5 +7,6 @@
 #include "learn.h"
 ////////////////////////  main()
 int main() {
+    read_file();
     return 0;
 }

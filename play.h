@@ -1,3 +1,0 @@
-void fun(){
-    printf("hi");
-}
