@@ -1,3 +1,4 @@
+#define MAX_LINE 1500;
 typedef struct Node{
     char* data;
     struct Node* y;
@@ -8,17 +9,34 @@ typedef struct Binary_tree{
     Node* root;
 } Binary_tree ;
 
-int read_file(){
+FILE* open_file(){
     FILE* filePtr = fopen("countries2.txt", "r");
     if(!filePtr) {
         perror("Error encountered while opening file!\n");
         exit(-1);
     }
-    char str[1500];
-    if(str[0] == '-' && str[1] == '1')
-        return -1;
-    return 0;
+    return filePtr;
 }
-void construct_binary_tree(Node* current){
+char* read_file(FILE* filePtr){
+    char* line = (char*)malloc(1500 * sizeof (char));
+    if(fgets(line, 1500, filePtr) == NULL){
+        free(line);
+        return NULL;
+    }
+    if(line[0] == '-' && line[1] == '1')
+        return NULL;
+    return line;
+}
+void construct_binary_tree(FILE* filePtr, Node** currentPtr){
+    char* line = read_file(filePtr);
+    if(!line)
+        return;
+    *currentPtr = (Node*) malloc(sizeof(Node));
 
+    (*currentPtr)->data = line;
+    (*currentPtr)->y = NULL;
+    (*currentPtr)->n = NULL;
+
+    construct_binary_tree(filePtr, &(*currentPtr)->y);
+    construct_binary_tree(filePtr, &(*currentPtr)->n);
 }

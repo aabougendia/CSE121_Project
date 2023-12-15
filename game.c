@@ -8,7 +8,11 @@
 #include "learn.h"
 ////////////////////////  main()
 int main() {
-    printf("%d", read_file());
+    FILE* filePtr;
+    filePtr = open_file();
+    Binary_tree countries;
+    countries.root = NULL;
+    construct_binary_tree(filePtr, &countries.root);
     return 0;
 
 }
