@@ -24,7 +24,7 @@ New Zealand
 -1
 -1
 Does it have coastlines over the Red Sea?
-KSA
+Saudi Arabia
 -1
 -1
 Democratic republc of Congo
@@ -53,7 +53,7 @@ Egypt
 -1
 -1
 Is the Dollar its currency?
-U.S
+United States of America
 -1
 -1
 Japan
