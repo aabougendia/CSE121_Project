@@ -1,3 +1,4 @@
+#define MAX_LINE_SIZE 999
 typedef struct Node{
     char* data;
     struct Node* y;
@@ -9,7 +10,8 @@ typedef struct Binary_tree{
 } Binary_tree ;
 
 FILE* open_file(){
-    FILE* filePtr = fopen("D:\\Programming\\CLion\\Clion2\\PROJECT COUNTRY GUESS\\Github\\CSE121_Project\\countries2.txt", "r");
+    char* file_name = "countries.txt";
+    FILE* filePtr = fopen(file_name, "r");
     if(!filePtr) {
         perror("Error encountered while opening file!\n");
         exit(-1);
@@ -17,35 +19,30 @@ FILE* open_file(){
     return filePtr;
 }
 
-
-char* read_file(FILE* filePtr){
-    char* line = (char*)malloc(1500 * sizeof (char));
-    if(fgets(line, 1500, filePtr) == NULL){
+char* read_line(FILE* filePtr){
+    char* line = (char*)malloc(MAX_LINE_SIZE * sizeof (char));
+    if(fgets(line, MAX_LINE_SIZE, filePtr) == NULL){
         free(line);
         return NULL;
     }
-    // if(line[0] == '-' && line[1] == '1')
-    line[strcspn(line, "\n")] = 0; // remove any new line characters
-    if(strcmp(line,"-1")==0)
+    if(!strcmp(line, "-1\n"))
         return NULL;
     return line;
 }
 
-
-
-
 void construct_binary_tree(FILE* filePtr, Node** currentPtr){
-    char* line = read_file(filePtr);
-    if(!line)
+    char* line = read_line(filePtr);
+    if(line == NULL)
         return;
+
     *currentPtr = (Node*) malloc(sizeof(Node));
 
     (*currentPtr)->data = line;
     (*currentPtr)->y = NULL;
     (*currentPtr)->n = NULL;
 
-    construct_binary_tree(filePtr, &(*currentPtr)->y);
-    construct_binary_tree(filePtr, &(*currentPtr)->n);
+    construct_binary_tree(filePtr, &((*currentPtr)->y));
+    construct_binary_tree(filePtr, &((*currentPtr)->n));
 }
 
  

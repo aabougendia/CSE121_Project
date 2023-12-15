@@ -1,1 +1,63 @@
-Is it known for hot weather? Does it have coastlines over the Atlantic Ocean? Is the country in Africa? Does it contain any rivers? Nigeria -1-1 Namibia -1-1 Does it speak Spanish? Argentina -1-1 Brazil -1-1  Is it an Island country? Is it and Asian country? Maldives -1-1 New Zealand -1-1 Does it have coastlines over the Red Sea? KSA -1-1 Democratic republc of Congo Is it in Europe? Is it a Nordic country? Does its flag have the color red? Norway -1-1 Sweden -1-1 Is it a Germanic country? Hungary -1-1 England -1-1 Does it have coastlines over the Mediterrean Sea?Is it known for olive trees? Palestine -1-1 Egypt -1-1  Is the Dollar its currency? U.S -1-1 Japan -1-1
+Is it known for hot weather?
+Does it have coastlines over the Atlantic Ocean?
+Is the country in Africa?
+Does it contain any rivers?
+Nigeria
+-1
+-1
+Namibia
+-1
+-1
+Does it speak Spanish?
+Argentina
+-1
+-1
+Brazil
+-1
+-1
+Is it an Island country?
+Is it an Asian country?
+Maldives
+-1
+-1
+New Zealand
+-1
+-1
+Does it have coastlines over the Red Sea?
+Saudi Arabia
+-1
+-1
+Democratic republic of Congo
+-1
+-1
+Is it in Europe?
+Is it a Nordic country?
+Does its flag have the color red?
+Norway 
+-1
+-1
+Sweden
+-1
+-1
+Is it a Germanic country?
+Hungary
+-1
+-1
+England
+-1
+-1
+Does it have coastlines over the Mediterrean Sea?
+Is it known for olive trees?
+Palestine
+-1
+-1
+Egypt
+-1
+-1
+Is the Dollar its currency?
+United States of America
+-1
+-1
+Japan
+-1
+-1

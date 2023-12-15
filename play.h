@@ -1,7 +1,7 @@
 char* list[100];
 void play(Node* root,Node*original){
      char ans ;
-    if(root->y == NULL && root->n==NULL) {
+    if(root->y == NULL && root->n == NULL) {
         printf("Is your country %s ? : ",root->data);
         ans=getchar();
         getchar();
@@ -38,7 +38,7 @@ void play(Node* root,Node*original){
         getchar();
     }
     if(ans=='y')
-        play(root->y,original);
+        play(root->y, original);
     else if (ans=='n')
         play(root->n,original);
     else
