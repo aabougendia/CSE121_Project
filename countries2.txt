@@ -16,7 +16,7 @@ Brazil
 -1
 -1
 Is it an Island country?
-Is it and Asian country?
+Is it an Asian country?
 Maldives
 -1
 -1
@@ -27,7 +27,9 @@ Does it have coastlines over the Red Sea?
 Saudi Arabia
 -1
 -1
-Democratic republc of Congo
+Democratic republic of Congo
+-1
+-1
 Is it in Europe?
 Is it a Nordic country?
 Does its flag have the color red?

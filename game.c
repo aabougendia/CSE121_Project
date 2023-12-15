@@ -12,6 +12,7 @@ int main() {
     Binary_tree countries;
     countries.root = NULL;
     construct_binary_tree(filePtr, &countries.root);
+    play(countries.root,countries.root);
     return 0;
 
 }
