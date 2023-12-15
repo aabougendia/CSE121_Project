@@ -1,5 +1,5 @@
 typedef struct Node{
-    char* Q;
+    char* data;
     struct Node* y;
     struct Node* n;
 } Node;
@@ -8,15 +8,17 @@ typedef struct Binary_tree{
     Node* root;
 } Binary_tree ;
 
-void read_file(){
+int read_file(){
     FILE* filePtr = fopen("countries2.txt", "r");
     if(!filePtr) {
         perror("Error encountered while opening file!\n");
-        return;
+        exit(-1);
     }
-    char str[2000];
-    fgets(str, sizeof(str), filePtr);
-    fgets(str, sizeof(str), filePtr);
-    //fread(str, sizeof(str), 1, filePtr);
-    printf("%s", str);
+    char str[1500];
+    if(str[0] == '-' && str[1] == '1')
+        return -1;
+    return 0;
+}
+void construct_binary_tree(Node* current){
+
 }
