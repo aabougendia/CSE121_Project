@@ -36,7 +36,6 @@ void play(Node* root,Node*original){
         printf("%s : ",root->data);
         ans=getchar();
         getchar();
-
     }
     if(ans=='y')
         play(root->y,original);

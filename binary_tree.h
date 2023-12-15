@@ -18,8 +18,6 @@ FILE* open_file(){
 }
 
 
-
-
 char* read_file(FILE* filePtr){
     char* line = (char*)malloc(1500 * sizeof (char));
     if(fgets(line, 1500, filePtr) == NULL){
