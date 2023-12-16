@@ -1,4 +1,21 @@
-char* list[100]; // Fill with countries
+char countries[100][50] = {
+        "Nigeria",
+        "Namibia",
+        "Argentina",
+        "Brazil",
+        "Maldives",
+        "New Zealand",
+        "Saudi Arabia",
+        "Democratic Republic of Congo",
+        "Norway",
+        "Sweden",
+        "Hungary",
+        "England",
+        "Palestine",
+        "Egypt",
+        "United States of America",
+        "Japan"
+};
 
 // Function to read a single character input and consume the newline
 char getChoice() {
