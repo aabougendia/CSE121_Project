@@ -28,6 +28,7 @@ char* read_line(FILE* filePtr){     // function to read the text file line by li
     }
     if(!strcmp(line, "-1\n"))   // checking if the line contains -1 which indicates reaching a leaf node
         return NULL;
+    line[strlen(line)-1] = '\0';
     return line;
 }
 
