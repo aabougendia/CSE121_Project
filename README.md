@@ -1,5 +1,8 @@
-<div align="center"><img src="https://cdn-icons-png.flaticon.com/256/13000/13000428.png?uid=R130293465&ga=GA1.1.913692944.1702067159&semt=ais"></div>
-<h1 align="center">Country-guessing-game</h1>
+<p align="center">
+  <img src="https://media4.giphy.com/media/VI2UC13hwWin1MIfmi/giphy.gif?cid=ecf05e477i2c7rbnvoxvvte01xq2lefm0kln5r2f7ffjt6f3&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Animated GIF">
+</p>
+
+ <h1 align="center">Country-guessing-game</h1>
 <p align="center"><strong>Description</strong>
 <br/>
 <h2>About The Project</h2>
