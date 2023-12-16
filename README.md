@@ -2,9 +2,28 @@
 <h1 align="center">Country-guessing-game</h1>
 <p align="center"><strong>Description</strong>
 <br/>
-<h2>About</h2>
+<h2>About The Project</h2>
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#project-overview">Project Overview</a>
+    </li>
+    <li>
+      <a href="#features">Features</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#how-to-play">How to Play</a></li>
+      </ul>
+    </li>
+    <li><a href="#key-learnings">Key learnings</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+  </ol>
+</details>
+
 
 Welcome to the Country Guessing Game! This project is a fun and educational game designed to test your knowledge of countries around the world. Whether you're a geography enthusiast or just looking for an entertaining way to learn about different cultures, this game is perfect for you.
+
 
 ### Project Overview
 
@@ -19,7 +38,7 @@ The Country Guessing Game is a command-line-based application that prompts users
 - **Randomized Questions:** The order and selection of questions are randomized, ensuring a unique experience each time the game is played.
 
 
-### Technologies Used
+### Built With
 
 The Country Guessing Game is implemented using C programming language. The project is designed with simplicity and user-friendliness in mind, making it accessible to both beginners and experienced players.
 
@@ -31,7 +50,7 @@ The Country Guessing Game is implemented using C programming language. The proje
 4. Enjoy learning about different countries and challenge yourself to improve your score!
 
 
-<h2>Key learnings</h2>
+### Key learnings 
 
  Implement :
  
@@ -41,12 +60,12 @@ The Country Guessing Game is implemented using C programming language. The proje
 - FILE I/O
 
 
-<h2>Contributing</h2>
+### Contributing
 If you're interested in contributing to the project, feel free to fork the repository, make improvements, and submit a pull request. We welcome contributions that enhance the game's content, functionality, or overall user experience.
 
 Dive into the world of geography and have a blast exploring countries with the Country Guessing Game!
 
-<h2>Credits</h2>
+### Credits
 
 - Dr. Fatma Elzahraa Elshahaby
 - aabougendia
