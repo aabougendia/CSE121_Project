@@ -1,13 +1,13 @@
 #define MAX_LINE_SIZE 999
 
 typedef struct Node{    // Node structure definition
-    char* data;         // node text data
+    char* data;         // Node text data
     struct Node* y;     // yes link
     struct Node* n;     // no link
 } Node;
 
 typedef struct Binary_tree{     // Binary tree structure definition
-    Node* root;     // root node
+    Node* root;     // root Node
 } Binary_tree ;
 
 FILE* open_file(){      // function to open the text file
