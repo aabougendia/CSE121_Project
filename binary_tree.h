@@ -28,12 +28,12 @@ char* read_line(FILE* filePtr){     // function to read the text file line by li
     }
     if(!strcmp(line, "-1\n"))   // checking if the line contains -1 which indicates reaching a leaf node
         return NULL;
-    return line
+    return line;
 }
 
 void construct_binary_tree(FILE* filePtr, Node** iteratorPtr){  // a recursive function to construct the binary tree structure
     char* line = read_line(filePtr);    // reading countries text file line by line
-    if(line == NULL)    // base case when we reach a leaf node
+    if(line == NULL)    // recursion base case when we reach a leaf node
         return;
 
     *iteratorPtr = (Node*) malloc(sizeof(Node));    // allocating memory blocks for binary tree nodes
