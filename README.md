@@ -18,6 +18,7 @@
     </li>
     <li><a href="#key-learnings">Key learnings</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 
