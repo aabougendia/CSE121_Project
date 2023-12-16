@@ -72,8 +72,8 @@ Dive into the world of geography and have a blast exploring countries with the C
 ### Credits
 
 - Dr. Fatma Elzahraa Elshahaby
-- aabougendia
-- KareemYasser101
-- Salah-elsayed-2005
-- fouadhashesh
-- IbEhab25
+- [@fouadhashesh](https://github.com/fouadhashesh)
+- [@KareemYasser101](https://github.com/KareemYasser101)
+- [@Salah-elsayed-2005](https://github.com/Salah-elsayed-2005)
+- [@aabougendia](https://github.com/aabougendia)
+- [@IbEhab25](https://github.com/IbEhab25)
