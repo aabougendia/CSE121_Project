@@ -16,7 +16,23 @@ char countries[100][50] = {
         "United States of America",
         "Japan"
 };
-
+int number_of_countries(){ // function that returns the current number of countries
+    int i;
+    for  ( i = 0; i < 100; ++i) {
+        if(countries[i][0]=='\0') // marks the end of list
+            break;
+    }
+    return i;
+}
+void intro(){ // welcome message that only initializes at first round
+    printf("Hello! Welcome to our game: \n");
+    printf("---------------------------\n");
+    printf("Our game consists currently of %d countries which are : \n",number_of_countries());
+    for (int i = 0; i < number_of_countries(); ++i) {
+        printf("%s\n",countries[i]);
+    }
+    printf("\n\n\"So let's start playing !!\" \n\n");
+}
 // Function to read a single character input and consume the newline
 char getChoice() {
     char choice = getchar();
@@ -38,6 +54,9 @@ void play(Node* root, Node* original) {
     if (root == NULL || original == NULL) {
         fprintf(stderr, "Error: Null pointer provided to play function.\n");
         exit(1);
+    }
+    if(root==original){ // welcome function
+        intro();
     }
 
     char ans;
