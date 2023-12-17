@@ -11,7 +11,7 @@ typedef struct Binary_tree{     // Binary tree structure definition
 } Binary_tree ;
 
 FILE* open_file(){      // function to open the text file
-    char* file_name = "D:\\Programming\\CLion\\Clion2\\PROJECT COUNTRY GUESS\\Github\\CSE121_Project\\countries.txt";
+    char* file_name = "C:\\Users\\Kareem\\Desktop\\Kareem\\University\\Engineering - Year 2\\2- Advanced Programming\\Project\\Country-guessing-game repo\\CSE121_Project\\countries.txt";
     FILE* filePtr = fopen(file_name, "r");
     if(filePtr == NULL) {       // checking if the file opens successfully
         perror("Error encountered while opening file!\n");
