@@ -1,62 +1,106 @@
-#include "learn.h"
-char* list[100];
-void play(Node* root,Node*original){
-     char ans ;
-    if(root->y == NULL && root->n == NULL) {
-        printf("%s",root->data);
-        printf("\nDid I guess correctly? (y/n): ");
-        ans=getchar();
-        getchar();
-        if(ans=='y'){
-            printf("ksbtk yala\n");
-            printf("Would you like to try again ? (y/n): ");
-             ans=getchar();
-             getchar();
-             if(ans=='y'){
-                 play(original,original);
-             }
-             if(ans=='n')
-             {
-                 printf("Thanks for Playing <3");
-                 exit(0);
-             }
+char countries[100][50] = {
+        "Nigeria",
+        "Namibia",
+        "Argentina",
+        "Brazil",
+        "Maldives",
+        "New Zealand",
+        "Saudi Arabia",
+        "Democratic Republic of Congo",
+        "Norway",
+        "Sweden",
+        "Hungary",
+        "England",
+        "Palestine",
+        "Egypt",
+        "United States of America",
+        "Japan"
+};
+
+int number_of_countries(){ // function that returns the current number of countries
+    int i;
+    for  ( i = 0; i < 100; ++i) {
+        if(countries[i][0]=='\0') // marks the end of list
+            break;
+    }
+    return i;
+}
+void intro(){ // welcome message that only initializes at first round
+    printf("Hello! Welcome to our game: \n");
+    printf("---------------------------\n");
+    printf("Our game consists currently of %d countries which are : \n",number_of_countries());
+    for (int i = 0; i < number_of_countries(); ++i) {
+        printf("%s\n",countries[i]);
+    }
+    printf("\n\n\"So let's start playing !!\" \n\n");
+}
+// Function to read a single character input and consume the newline
+char getChoice() {
+    char choice = getchar();
+    choice = tolower(choice); // Convert to lowercase
+    while (getchar() != '\n'); // Clear the input buffer
+    return choice;
+}
+
+// Function to handle the end of the game
+void endGame() {
+    printf("Thanks for Playing <3\n");
+    exit(0);
+}
+
+// Play function - recursive approach to traverse the tree based on user input
+void play(Node* root, Node* original) {
+     // Check if there is no tree and terminate if true
+    if (root == NULL || original == NULL) {
+        fprintf(stderr, "Error: Null pointer provided to play function.\n");
+        exit(1);
+    }
+    if(root==original){ // welcome function
+        intro();
+    }
+
+    char ans;
+
+    // Leaf node - guess the country
+    if (root->y == NULL && root->n == NULL) {
+        printf("Is your country %s? (y/n): ", root->data);
+        ans = getChoice();
+
+        if (ans == 'y') {
+            printf("Got it!\n");
+        } else if (ans == 'n') {
+            printf("Whoops\n");
+        } else {
+            printf("Invalid input\n");
+            return;
         }
-        else if(ans=='n'){
 
-            //learning section
+        // Ask to play again
+        printf("Would you like to try again? (y/n): ");
+        ans = getChoice();
 
-            printf("What was the country you were thinking of ? : ");
-            char* newcountry = scanf("%s",&newcountry);
-            printf("What question should I have asked ? : ");
-            char* newquestion = scanf("%s",&newquestion);
-            printf("OK!\n");
-            learn(root->data,newcountry,newquestion);// Learn function to add the new country and its question into the file
-            
-            printf("Would you like to try again ? (y/n): ");
-            ans=getchar();
-            getchar();
-            if(ans=='y'){
-                play(original,original);
+          if (ans == 'y') {
+            play(original, original);
+        } else if (ans == 'n') {
+            // learn.h
+                endGame();
             }
-            else if(ans=='n')
-            {
-                printf("Thanks for Playing <3");
-                exit(0);
-            }
-            else
-                printf("Wrong input please try again");
+          else {
+             printf("Invalid input\n");
         }
     }
-    else{
-        printf("%s ",root->data);
-        ans=getchar();
-        getchar();
-    }
-    if(ans=='y')
-      play(root->y, original);
-    else if (ans=='n')
-      play(root->n,original);
-    else
-      printf("Invalid input");
 
+    else {
+        // Non-leaf node - ask question
+        printf("%s (y/n): ", root->data);
+        ans = getChoice();
+
+        if (ans == 'y') {
+            play(root->y, original);
+        } else if (ans == 'n') {
+            play(root->n, original);
+        } else {
+            printf("Invalid input\n");
+        }
+    }
 }

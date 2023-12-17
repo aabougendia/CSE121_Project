@@ -11,8 +11,8 @@ typedef struct Binary_tree{     // Binary tree structure definition
 } Binary_tree ;
 
 FILE* open_file(){      // function to open the text file
-    char* file_name = "C:\\Users\\Kareem\\Desktop\\Kareem\\University\\Engineering - Year 2\\2- Advanced Programming\\Project\\Country-guessing-game repo\\CSE121_Project\\countries.txt";
-    FILE* filePtr = fopen(file_name, "r");
+    char* file_name = "countries.txt";
+    FILE* filePtr = fopen(file_name, "r+");
     if(filePtr == NULL) {       // checking if the file opens successfully
         perror("Error encountered while opening file!\n");
         exit(-1);
@@ -24,9 +24,9 @@ char* read_line(FILE* filePtr){     // function to read the text file line by li
     char* line = (char*)malloc(MAX_LINE_SIZE * sizeof (char));
     if(fgets(line, MAX_LINE_SIZE, filePtr) == NULL){    //  checking if errors occur while reading text lines
         free(line);     // deallocating line pointer if errors occur
-        return NULL;    // returning NULL pointer to indicate that error occured
+        return NULL;    // returning NULL pointer to indicate that error occurred
     }
-     if(!strcmp(line, "-1\n"))   // checking if the line contains -1 which indicates reaching a leaf node
+    if(!strcmp(line, "-1\n"))   // checking if the line contains -1 which indicates reaching a leaf node
         return NULL;
     line[strlen(line)-1] = '\0';
     return line;
@@ -48,6 +48,3 @@ void construct_binary_tree(FILE* filePtr, Node** iteratorPtr){  // a recursive f
     construct_binary_tree(filePtr, &((*iteratorPtr)->y));
     construct_binary_tree(filePtr, &((*iteratorPtr)->n));
 }
-
-
- 

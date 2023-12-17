@@ -27,7 +27,7 @@ Does it have coastlines over the Red Sea? (y/n):
 Saudi Arabia
 -1
 -1
-Democratic republic of Congo
+Democratic Republic of Congo
 -1
 -1
 Is it in Europe? (y/n):
@@ -46,8 +46,13 @@ Hungary
 England
 -1
 -1
+<<<<<<< HEAD
 Does it have coastlines over the Mediterrean Sea? (y/n):
 Is it known for olive trees? (y/n):
+=======
+Does it have coastlines over the Mediterranean Sea?
+Is it known for olive trees?
+>>>>>>> b0a7c1d2740ae06c8a06eef1efca3f88fa2e28bb
 Palestine
 -1
 -1

@@ -23,7 +23,6 @@ CMakeFiles/CSE121_Project.dir/game.c.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/string.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/ctype.h \
  D:\Programming\CLion\Clion2\PROJECT\ COUNTRY\ GUESS\Github\CSE121_Project\binary_tree.h \
  D:\Programming\CLion\Clion2\PROJECT\ COUNTRY\ GUESS\Github\CSE121_Project\play.h \
  D:\Programming\CLion\Clion2\PROJECT\ COUNTRY\ GUESS\Github\CSE121_Project\learn.h

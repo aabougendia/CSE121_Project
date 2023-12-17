@@ -17,7 +17,6 @@ if(buffer==oldcountry){
 }
 }
 
-
 fclose(fileptr);
 
 //construct_binary_tree(fileptr,Binary_tree);
