@@ -77,7 +77,7 @@ void play(Node* root, Node* original,Binary_tree countries) {
             gets(newquestion);
             printf("OK!\n");
 
-            learn(Binary_tree countries,root->data,newcountry,newquestion);// Learn function to add the new country and its question into the file
+            learn(countries,root->data,newcountry,newquestion);// Learn function to add the new country and its question into the file
         } else {
             printf("Invalid input\n");
             return;
