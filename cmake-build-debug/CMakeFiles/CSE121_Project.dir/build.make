@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project"
+CMAKE_SOURCE_DIR = "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CSE121_Project.dir/depend.make
@@ -69,18 +69,18 @@ include CMakeFiles/CSE121_Project.dir/progress.make
 include CMakeFiles/CSE121_Project.dir/flags.make
 
 CMakeFiles/CSE121_Project.dir/game.c.obj: CMakeFiles/CSE121_Project.dir/flags.make
-CMakeFiles/CSE121_Project.dir/game.c.obj: D:/Programming/CLion/Clion2/PROJECT\ COUNTRY\ GUESS/Github/CSE121_Project/game.c
+CMakeFiles/CSE121_Project.dir/game.c.obj: C:/Users/Kareem/Desktop/Kareem/University/Engineering\ -\ Year\ 2/2-\ Advanced\ Programming/Project/Country-guessing-game\ repo/CSE121_Project/game.c
 CMakeFiles/CSE121_Project.dir/game.c.obj: CMakeFiles/CSE121_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CSE121_Project.dir/game.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/CSE121_Project.dir/game.c.obj -MF CMakeFiles\CSE121_Project.dir\game.c.obj.d -o CMakeFiles\CSE121_Project.dir\game.c.obj -c "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\game.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CSE121_Project.dir/game.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/CSE121_Project.dir/game.c.obj -MF CMakeFiles\CSE121_Project.dir\game.c.obj.d -o CMakeFiles\CSE121_Project.dir\game.c.obj -c "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\game.c"
 
 CMakeFiles/CSE121_Project.dir/game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CSE121_Project.dir/game.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\game.c" > CMakeFiles\CSE121_Project.dir\game.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\game.c" > CMakeFiles\CSE121_Project.dir\game.c.i
 
 CMakeFiles/CSE121_Project.dir/game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CSE121_Project.dir/game.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\game.c" -o CMakeFiles\CSE121_Project.dir\game.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\game.c" -o CMakeFiles\CSE121_Project.dir\game.c.s
 
 # Object files for target CSE121_Project
 CSE121_Project_OBJECTS = \
@@ -94,7 +94,7 @@ CSE121_Project.exe: CMakeFiles/CSE121_Project.dir/build.make
 CSE121_Project.exe: CMakeFiles/CSE121_Project.dir/linklibs.rsp
 CSE121_Project.exe: CMakeFiles/CSE121_Project.dir/objects1.rsp
 CSE121_Project.exe: CMakeFiles/CSE121_Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable CSE121_Project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable CSE121_Project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CSE121_Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +106,6 @@ CMakeFiles/CSE121_Project.dir/clean:
 .PHONY : CMakeFiles/CSE121_Project.dir/clean
 
 CMakeFiles/CSE121_Project.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project" "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project" "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\cmake-build-debug" "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\cmake-build-debug" "D:\Programming\CLion\Clion2\PROJECT COUNTRY GUESS\Github\CSE121_Project\cmake-build-debug\CMakeFiles\CSE121_Project.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project" "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project" "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\cmake-build-debug" "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\cmake-build-debug" "C:\Users\Kareem\Desktop\Kareem\University\Engineering - Year 2\2- Advanced Programming\Project\Country-guessing-game repo\CSE121_Project\cmake-build-debug\CMakeFiles\CSE121_Project.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/CSE121_Project.dir/depend
 

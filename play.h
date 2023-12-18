@@ -49,7 +49,7 @@ void endGame() {
 }
 
 // Play function - recursive approach to traverse the tree based on user input
-void play(Node* root, Node* original) {
+void play(Node* root, Node* original,Binary_tree countries) {
      // Check if there is no tree and terminate if true
     if (root == NULL || original == NULL) {
         fprintf(stderr, "Error: Null pointer provided to play function.\n");
@@ -69,7 +69,15 @@ void play(Node* root, Node* original) {
         if (ans == 'y') {
             printf("Got it!\n");
         } else if (ans == 'n') {
-            printf("Whoops\n");
+            printf("What was the country you were thinking of ? : ");
+            char* newcountry = (char*)malloc(100*sizeof(char*));
+            gets(newcountry);
+            printf("What question should I have asked ? : ");
+            char* newquestion = (char*)malloc(100*sizeof(char*));
+            gets(newquestion);
+            printf("OK!\n");
+
+            learn(Binary_tree countries,root->data,newcountry,newquestion);// Learn function to add the new country and its question into the file
         } else {
             printf("Invalid input\n");
             return;
@@ -82,7 +90,6 @@ void play(Node* root, Node* original) {
           if (ans == 'y') {
             play(original, original);
         } else if (ans == 'n') {
-            // learn.h
                 endGame();
             }
           else {

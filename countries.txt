@@ -1,65 +1,60 @@
-Is it known for hot weather? (y/n):
-Does it have coastlines over the Atlantic Ocean? (y/n):
-Is the country in Africa? (y/n):
-Does it contain any rivers? (y/n):
+Is it known for hot weather?
+Does it have coastlines over the Atlantic Ocean?
+Is the country in Africa?
+Does it contain any rivers?
 Nigeria
 -1
 -1
 Namibia
 -1
 -1
-Does it speak Spanish? (y/n):
+Does it speak Spanish?
 Argentina
 -1
 -1
 Brazil
 -1
 -1
-Is it an Island country? (y/n):
-Is it an Asian country? (y/n):
+Is it an Island country?
+Is it an Asian country?
 Maldives
 -1
 -1
 New Zealand
 -1
 -1
-Does it have coastlines over the Red Sea? (y/n):
+Does it have coastlines over the Red Sea?
 Saudi Arabia
 -1
 -1
 Democratic Republic of Congo
 -1
 -1
-Is it in Europe? (y/n):
-Is it a Nordic country? (y/n):
-Does its flag have the color red? (y/n):
+Is it in Europe?
+Is it a Nordic country?
+Does its flag have the color red?
 Norway 
 -1
 -1
 Sweden
 -1
 -1
-Is it a Germanic country? (y/n):
+Is it a Germanic country?
 Hungary
 -1
 -1
 England
 -1
 -1
-<<<<<<< HEAD
-Does it have coastlines over the Mediterrean Sea? (y/n):
-Is it known for olive trees? (y/n):
-=======
 Does it have coastlines over the Mediterranean Sea?
 Is it known for olive trees?
->>>>>>> b0a7c1d2740ae06c8a06eef1efca3f88fa2e28bb
 Palestine
 -1
 -1
 Egypt
 -1
 -1
-Is the Dollar its currency? (y/n):
+Is the Dollar its currency?
 United States of America
 -1
 -1
