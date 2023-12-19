@@ -88,7 +88,7 @@ void play(Node* root, Node* original,Binary_tree countries) {
         ans = getChoice();
 
           if (ans == 'y') {
-            play(original, original);
+            play(original, original,countries);
         } else if (ans == 'n') {
                 endGame();
             }
@@ -103,9 +103,9 @@ void play(Node* root, Node* original,Binary_tree countries) {
         ans = getChoice();
 
         if (ans == 'y') {
-            play(root->y, original);
+            play(root->y, original,countries);
         } else if (ans == 'n') {
-            play(root->n, original);
+            play(root->n, original,countries);
         } else {
             printf("Invalid input\n");
         }
