@@ -1,4 +1,4 @@
-char countries[100][50] = {
+char Countries[100][50] = {
         "Nigeria",
         "Namibia",
         "Argentina",
@@ -20,7 +20,7 @@ char countries[100][50] = {
 int number_of_countries(){ // function that returns the current number of countries
     int i;
     for  ( i = 0; i < 100; ++i) {
-        if(countries[i][0]=='\0') // marks the end of list
+        if(Countries[i][0]=='\0') // marks the end of list
             break;
     }
     return i;
@@ -30,7 +30,7 @@ void intro(){ // welcome message that only initializes at first round
     printf("---------------------------\n");
     printf("Our game consists currently of %d countries which are : \n",number_of_countries());
     for (int i = 0; i < number_of_countries(); ++i) {
-        printf("%s\n",countries[i]);
+        printf("%s\n",Countries[i]);
     }
     printf("\n\n\"So let's start playing !!\" \n\n");
 }
@@ -70,14 +70,17 @@ void play(Node* root, Node* original,Binary_tree countries) {
             printf("Got it!\n");
         } else if (ans == 'n') {
             printf("What was the country you were thinking of ? : ");
-            char* newcountry = (char*)malloc(100*sizeof(char*));
+            char* newcountry = (char*)malloc(MAX_LINE_SIZE*sizeof(char*));
             gets(newcountry);
             printf("What question should I have asked ? : ");
-            char* newquestion = (char*)malloc(100*sizeof(char*));
+            char* newquestion = (char*)malloc(MAX_LINE_SIZE*sizeof(char*));
             gets(newquestion);
             printf("OK!\n");
 
-            learn(countries,root->data,newcountry,newquestion);// Learn function to add the new country and its question into the file
+            learn(&root,newcountry,newquestion);// Learn function to add the new country and its question into the file
+            printf("##### %s", root ->y->data);
+            FILE * fptr = fopen("C:\\Users\\Kareem\\Desktop\\Kareem\\University\\Engineering - Year 2\\2- Advanced Programming\\Project\\Country-guessing-game repo\\CSE121_Project\\Write_NewBinTree.txt","w+");
+            Write_BinTree(fptr,countries.root);
         } else {
             printf("Invalid input\n");
             return;
