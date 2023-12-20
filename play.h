@@ -78,8 +78,7 @@ void play(Node* root, Node* original,Binary_tree countries) {
             printf("OK!\n");
 
             learn(&root,newcountry,newquestion);// Learn function to add the new country and its question into the file
-            printf("##### %s", root ->y->data);
-            FILE * fptr = fopen("C:\\Users\\Kareem\\Desktop\\Kareem\\University\\Engineering - Year 2\\2- Advanced Programming\\Project\\Country-guessing-game repo\\CSE121_Project\\Write_NewBinTree.txt","w+");
+            FILE * fptr = fopen("C:\\Users\\Kareem\\Desktop\\Kareem\\University\\Engineering - Year 2\\2- Advanced Programming\\Project\\Country-guessing-game repo\\CSE121_Project\\countries.txt","w+");
             Write_BinTree(fptr,countries.root);
         } else {
             printf("Invalid input\n");
