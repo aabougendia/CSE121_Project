@@ -61,6 +61,7 @@ The Country Guessing Game is implemented using C programming language. The proje
 - Structures
 - Linkedlists
 - Binary Tree
+- Recursion (DFS)
 - FILE I/O
 
 
