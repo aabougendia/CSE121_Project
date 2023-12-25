@@ -10,7 +10,7 @@ typedef struct Binary_tree{     // Binary tree structure definition
     Node* root;     // root Node
 } Binary_tree ;
 
-FILE* open_file(){      // function to open the text file
+FILE* open_file(){      // function to open the text file, returns the file pointer
     char* file_name = "countries.txt";
     FILE* filePtr = fopen(file_name, "r+");
     if(filePtr == NULL) {       // checking if the file opens successfully
@@ -21,6 +21,7 @@ FILE* open_file(){      // function to open the text file
 }
 
 char* read_line(FILE* filePtr){     // function to read the text file line by line
+    // takes the file pointer as parameter and returns the line string each time the function is called
     char* line = (char*)malloc(MAX_LINE_SIZE * sizeof (char));
     if(fgets(line, MAX_LINE_SIZE, filePtr) == NULL){    //  checking if errors occur while reading text lines
         free(line);     // deallocating line pointer if errors occur
@@ -33,6 +34,8 @@ char* read_line(FILE* filePtr){     // function to read the text file line by li
 }
 
 void construct_binary_tree(FILE* filePtr, Node** iteratorPtr){  // a recursive function to construct the binary tree structure
+    // takes the file pointer as a parameter and passes and iterator pointer by reference to traverse over the binary tree
+
     char* line = read_line(filePtr);    // reading countries text file line by line
     if(line == NULL)    // recursion base case when we reach a leaf node
         return;
@@ -48,8 +51,8 @@ void construct_binary_tree(FILE* filePtr, Node** iteratorPtr){  // a recursive f
     construct_binary_tree(filePtr, &((*iteratorPtr)->y));
     construct_binary_tree(filePtr, &((*iteratorPtr)->n));
 }
-void free_binary_tree(Node* iterator){
-    if(iterator == NULL && iterator == NULL)
+void free_binary_tree(Node* iterator){  // function to deallocate memory reserved for binary tree, traverses over the binary tree using the iterator pointer
+    if(iterator == NULL)
         return;
 
     free_binary_tree(iterator->y);
