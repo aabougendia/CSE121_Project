@@ -4,10 +4,14 @@
 #include <string.h>
 #include <ctype.h>
 /////////////////////////  our header files
+
 #include "binary_tree.h"
 #include "play.h"
 #include "learn.h"
 ////////////////////////  main()
+
+
+
 int main() {
     FILE* filePtr = open_file();
     Binary_tree countries;

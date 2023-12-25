@@ -1,38 +1,8 @@
-char Countries[100][50] = {
-        "Nigeria",
-        "Namibia",
-        "Argentina",
-        "Brazil",
-        "Maldives",
-        "New Zealand",
-        "Saudi Arabia",
-        "Democratic Republic of Congo",
-        "Norway",
-        "Sweden",
-        "Hungary",
-        "England",
-        "Palestine",
-        "Egypt",
-        "United States of America",
-        "Japan"
-};
-
-int number_of_countries(){ // function that returns the current number of countries
-    int i;
-    for  ( i = 0; i < 100; ++i) {
-        if(Countries[i][0]=='\0') // marks the end of list
-            break;
-    }
-    return i;
-}
+extern void Write_BinTree(FILE *fptr,Node * iterator);
+extern void learn(Node** rnode,char * newcountry,char* newquestion);
 void intro(){ // welcome message that only initializes at first round
     printf("Hello! Welcome to our game: \n");
     printf("---------------------------\n");
-    printf("Our game consists currently of %d countries which are : \n",number_of_countries());
-    for (int i = 0; i < number_of_countries(); ++i) {
-        printf("%s\n",Countries[i]);
-    }
-    printf("\n\n\"So let's start playing !!\" \n\n");
 }
 // Function to read a single character input and consume the newline
 char getChoice() {
@@ -78,7 +48,7 @@ void play(Node* root, Node* original,Binary_tree countries) {
             printf("OK!\n");
 
             learn(&root,newcountry,newquestion);// Learn function to add the new country and its question into the file
-            FILE * fptr = fopen("C:\\Users\\Kareem\\Desktop\\Kareem\\University\\Engineering - Year 2\\2- Advanced Programming\\Project\\Country-guessing-game repo\\CSE121_Project\\countries.txt","w+");
+            FILE * fptr = fopen("countries.txt","w+");
             Write_BinTree(fptr,countries.root);
         } else {
             printf("Invalid input\n");
