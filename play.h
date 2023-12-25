@@ -1,5 +1,5 @@
-extern void Write_BinTree(FILE *fptr,Node * iterator);
-extern void learn(Node** rnode,char * newcountry,char* newquestion);
+extern void Write_BinTree(FILE *fPtr, Node * iterator);
+extern void learn(Node** root, char * new_country, char* new_question);
 void intro(){ // welcome message that only initializes at first round
     printf("Hello! Welcome to our game: \n");
     printf("---------------------------\n");
@@ -15,17 +15,17 @@ char getChoice() {
 // Function to handle the end of the game
 void endGame() {
     printf("Thanks for Playing <3\n");
-    exit(0);
+    // exit(0);
 }
 
 // Play function - recursive approach to traverse the tree based on user input
-void play(Node* root, Node* original,Binary_tree countries) {
+void play(Node* root, Node* original, Binary_tree countries) {
      // Check if there is no tree and terminate if true
     if (root == NULL || original == NULL) {
         fprintf(stderr, "Error: Null pointer provided to play function.\n");
         exit(1);
     }
-    if(root==original){ // welcome function
+    if(root == original){ // welcome function
         intro();
     }
 
@@ -40,17 +40,20 @@ void play(Node* root, Node* original,Binary_tree countries) {
             printf("Got it!\n");
         } else if (ans == 'n') {
             printf("What was the country you were thinking of ? : ");
-            char* newcountry = (char*)malloc(MAX_LINE_SIZE*sizeof(char*));
-            gets(newcountry);
+            char* new_country = (char*)malloc(MAX_LINE_SIZE * sizeof(char*));
+            gets(new_country);
             printf("What question should I have asked ? : ");
-            char* newquestion = (char*)malloc(MAX_LINE_SIZE*sizeof(char*));
-            gets(newquestion);
+            char* new_question = (char*)malloc(MAX_LINE_SIZE * sizeof(char*));
+            gets(new_question);
             printf("OK!\n");
 
-            learn(&root,newcountry,newquestion);// Learn function to add the new country and its question into the file
+            learn(&root, new_country, new_question);
+            // Learn function to add the new country and its question into the file
             FILE * fptr = fopen("countries.txt","w+");
             Write_BinTree(fptr,countries.root);
-        } else {
+            fclose(fptr);
+        }
+        else {
             printf("Invalid input\n");
             return;
         }
@@ -60,11 +63,11 @@ void play(Node* root, Node* original,Binary_tree countries) {
         ans = getChoice();
 
           if (ans == 'y') {
-            play(original, original,countries);
-        } else if (ans == 'n') {
+            play(original, original, countries);
+        }else if (ans == 'n') {
                 endGame();
-            }
-          else {
+          }
+          else{
              printf("Invalid input\n");
         }
     }
@@ -75,9 +78,9 @@ void play(Node* root, Node* original,Binary_tree countries) {
         ans = getChoice();
 
         if (ans == 'y') {
-            play(root->y, original,countries);
+            play(root->y, original, countries);
         } else if (ans == 'n') {
-            play(root->n, original,countries);
+            play(root->n, original, countries);
         } else {
             printf("Invalid input\n");
         }

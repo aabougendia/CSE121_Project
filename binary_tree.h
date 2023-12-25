@@ -1,10 +1,9 @@
 #define MAX_LINE_SIZE 999
 
 typedef struct Node{    // Node structure definition
-    char* data;// Node text data
+    char* data;         // Node text data
     struct Node* y;     // yes link
     struct Node* n;     // no link
-
 } Node;
 
 typedef struct Binary_tree{     // Binary tree structure definition
@@ -48,4 +47,13 @@ void construct_binary_tree(FILE* filePtr, Node** iteratorPtr){  // a recursive f
     // performing pre-order traversal over the binary tree using recursion function calling
     construct_binary_tree(filePtr, &((*iteratorPtr)->y));
     construct_binary_tree(filePtr, &((*iteratorPtr)->n));
+}
+void free_binary_tree(Node* iterator){
+    if(iterator == NULL && iterator == NULL)
+        return;
+
+    free_binary_tree(iterator->y);
+    free_binary_tree(iterator->n);
+
+    free(iterator);
 }

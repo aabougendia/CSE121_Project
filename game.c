@@ -9,15 +9,14 @@
 #include "play.h"
 #include "learn.h"
 ////////////////////////  main()
-
-
-
 int main() {
     FILE* filePtr = open_file();
     Binary_tree countries;
     countries.root = NULL;
     construct_binary_tree(filePtr, &countries.root);
-    play(countries.root,countries.root,countries);
+    fclose(filePtr);
+    play(countries.root,countries.root, countries);
+    free_binary_tree(countries.root);
     return 0;
 
 }
