@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CSE121_Project.dir/game.c.obj"
-  "CMakeFiles/CSE121_Project.dir/game.c.obj.d"
-  "CSE121_Project.exe"
-  "CSE121_Project.exe.manifest"
+  "CMakeFiles/CSE121_Project.dir/game.c.o"
+  "CMakeFiles/CSE121_Project.dir/game.c.o.d"
+  "CSE121_Project"
   "CSE121_Project.pdb"
-  "libCSE121_Project.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

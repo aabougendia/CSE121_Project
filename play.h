@@ -16,24 +16,34 @@ char countries[100][50] = {
         "United States of America",
         "Japan"
 };
-int number_of_countries(){ // function that returns the current number of countries
+
+// Function that returns the current number of countries
+int numberOfCountries(){ 
     int i;
-    for  ( i = 0; i < 100; ++i) {
-        if(countries[i][0]=='\0') // marks the end of list
+    for( i = 0; i < 100; ++i){
+        if(countries[i][0]=='\0') // Marks the end of the list
             break;
     }
     return i;
 }
-void intro(){ // welcome message that only initializes at first round
-    printf("Hello! Welcome to our game: \n");
-    printf("---------------------------\n");
-    printf("Our game consists currently of %d countries which are : \n",number_of_countries());
-    for (int i = 0; i < number_of_countries(); ++i) {
-        printf("%s\n",countries[i]);
+
+// Display a welcome message that only initializes at the first round
+void intro(GtkWidget *output_label) {
+    char intro_text[1024] = "Hello, Welcome to our game!\n---------------------------\n";
+    char country_list[1024] = "Our game currently consists of the following countries:\n";
+
+    for (int i = 0; i < numberOfCountries(); ++i) {
+        strcat(country_list, countries[i]);
+        strcat(country_list, "\n");
     }
-    printf("\n\n\"So let's start playing !!\" \n\n");
+
+    strcat(intro_text, country_list);
+    strcat(intro_text, "\nSo let's start playing !!\n");
+
+    gtk_label_set_text(GTK_LABEL(output_label), intro_text);
 }
-// Function to read a single character input and consume the newline
+
+// Function to read a single character input and clear the newline
 char getChoice() {
     char choice = getchar();
     choice = tolower(choice); // Convert to lowercase
@@ -48,57 +58,31 @@ void endGame() {
 }
 
 // Play function - recursive approach to traverse the tree based on user input
-void play(Node* root, Node* original) {
-
+// Play function - modified for GTK interface
+void play(Node* root, Node* original, GtkWidget *output_label) {
     // Check if there is no tree and terminate if true
     if (root == NULL || original == NULL) {
         fprintf(stderr, "Error: Null pointer provided to play function.\n");
         exit(1);
     }
-    if(root==original){ // welcome function
-        intro();
-    }
 
-    char ans;
+    // Display intro if at the beginning of the game
+    if (root == original) {
+        intro(output_label);
+    }
 
     // Leaf node - guess the country
     if (root->y == NULL && root->n == NULL) {
-        printf("Is your country %s? (y/n): ", root->data);
-        ans = getChoice();
-
-        if (ans == 'y') {
-            printf("Got it!\n");
-        } else if (ans == 'n') {
-            printf("Whoops\n");
-        } else {
-            printf("Invalid input\n");
-            return;
-        }
-
-        // Ask to play again
-        printf("Would you like to try again? (y/n): ");
-        ans = getChoice();
-
-        if (ans == 'y') {
-            play(original, original);
-        } else if (ans == 'n') {
-            endGame();
-        } else {
-            printf("Invalid input\n");
-        }
+        char question[256];
+        sprintf(question, "Is your country %s?", root->data);
+        gtk_label_set_text(GTK_LABEL(output_label), question);
+        // The response will be handled by the "Yes" or "No" button signals in game.c
     }
-
     else {
         // Non-leaf node - ask question
-        printf("%s (y/n): ", root->data);
-        ans = getChoice();
-
-        if (ans == 'y') {
-            play(root->y, original);
-        } else if (ans == 'n') {
-            play(root->n, original);
-        } else {
-            printf("Invalid input\n");
-        }
+        char question[256];
+        sprintf(question, "%s", root->data);
+        gtk_label_set_text(GTK_LABEL(output_label), question);
+        // The response will be handled by the "Yes" or "No" button signals in game.c
     }
 }
