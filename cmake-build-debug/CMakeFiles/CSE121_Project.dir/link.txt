@@ -1,3 +1,3 @@
 "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\CSE121_Project.dir/objects.a
 C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\CSE121_Project.dir/objects.a @CMakeFiles\CSE121_Project.dir\objects1.rsp
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\CSE121_Project.dir/objects.a -Wl,--no-whole-archive -o CSE121_Project.exe -Wl,--out-implib,libCSE121_Project.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CSE121_Project.dir\linklibs.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\cc.exe -g -Wl,--whole-archive CMakeFiles\CSE121_Project.dir/objects.a -Wl,--no-whole-archive -o CSE121_Project.exe -Wl,--out-implib,libCSE121_Project.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CSE121_Project.dir\linklibs.rsp

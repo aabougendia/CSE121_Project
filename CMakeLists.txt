@@ -3,4 +3,7 @@ project(CSE121_Project C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(CSE121_Project game.c play.h learn.h binary_tree.h)
+add_executable(CSE121_Project game.c play.h learn.h binary_tree.h  )
+find_package(PkgConfig REQUIRED)
+
+

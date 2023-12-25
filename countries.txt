@@ -33,7 +33,7 @@ Democratic Republic of Congo
 Is it in Europe?
 Is it a Nordic country?
 Does its flag have the color red?
-Norway 
+Norway
 -1
 -1
 Sweden
@@ -59,5 +59,3 @@ United States of America
 -1
 -1
 Japan
--1
--1
