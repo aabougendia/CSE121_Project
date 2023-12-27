@@ -31,21 +31,21 @@ void endGame() {    // Function to handle the end of the game
 }
 
 // Play function - recursive approach to traverse the tree based on user input
-void play(Node* root, Node* original, Binary_tree countries) {
+void play(Node* iterator, Node* original, Binary_tree countries) {
      // Check if there is no tree and terminate if true
-    if (root == NULL || original == NULL) {
+    if (iterator == NULL || original == NULL) {
         fprintf(stderr, "Error: Null pointer provided to play function.\n");
         exit(1);
     }
-    if(root == original){ // welcome function
+    if(iterator == original){ // welcome function
         intro();
     }
 
     char ans;
 
     // Leaf node - guess the country
-    if (root->y == NULL && root->n == NULL) {
-        printf("Is your country %s? (y/n): ", root->data);
+    if (iterator->y == NULL && iterator->n == NULL) {
+        printf("Is your country %s? (y/n): ", iterator->data);
         ans = getChoice();
 
         if (ans == 'y') {
@@ -59,7 +59,7 @@ void play(Node* root, Node* original, Binary_tree countries) {
             gets(new_question);// get new_question from the user
             printf("OK!\n");
 
-            learn(&root, new_country, new_question);
+            learn(&iterator, new_country, new_question);
             // Learn function to add the new country and its question into the file
             FILE * fptr = fopen("countries.txt","w+");
             //Writing function to overwrite the file with the new changes
@@ -69,7 +69,7 @@ void play(Node* root, Node* original, Binary_tree countries) {
         }
         else {
             printf("Invalid input\n");
-            return;
+            play(iterator, original, countries);
         }
 
         // Ask to play again
@@ -83,20 +83,22 @@ void play(Node* root, Node* original, Binary_tree countries) {
           }
           else{
              printf("Invalid input\n");
+              play(iterator, original, countries);
         }
     }
 
     else {
         // Non-leaf node - ask question
-        printf("%s (y/n): ", root->data);
+        printf("%s (y/n): ", iterator->data);
         ans = getChoice();
 
         if (ans == 'y') {
-            play(root->y, original, countries);
+            play(iterator->y, original, countries);
         } else if (ans == 'n') {
-            play(root->n, original, countries);
+            play(iterator->n, original, countries);
         } else {
             printf("Invalid input\n");
+            play(iterator, original, countries);
         }
     }
 }
