@@ -68,7 +68,7 @@ void play(Node* iterator, Node* original, Binary_tree countries) {
             fclose(fptr);
         }
         else {
-            printf("Invalid input\n");
+            printf("Invalid input, Please try again!\n");
             play(iterator, original, countries);
         }
 
@@ -82,7 +82,7 @@ void play(Node* iterator, Node* original, Binary_tree countries) {
                 endGame();
           }
           else{
-             printf("Invalid input\n");
+              printf("Invalid input, Please try again!\n");
               play(iterator, original, countries);
         }
     }
@@ -97,7 +97,7 @@ void play(Node* iterator, Node* original, Binary_tree countries) {
         } else if (ans == 'n') {
             play(iterator->n, original, countries);
         } else {
-            printf("Invalid input\n");
+            printf("Invalid input, Please try again!\n");
             play(iterator, original, countries);
         }
     }
