@@ -41,16 +41,18 @@ void play(Node* root, Node* original, Binary_tree countries) {
         } else if (ans == 'n') {
             printf("What was the country you were thinking of ? : ");
             char* new_country = (char*)malloc(MAX_LINE_SIZE * sizeof(char*));
-            gets(new_country);
+            gets(new_country); // get new_country from the user
             printf("What question should I have asked ? : ");
             char* new_question = (char*)malloc(MAX_LINE_SIZE * sizeof(char*));
-            gets(new_question);
+            gets(new_question);// get new_question from the user
             printf("OK!\n");
 
             learn(&root, new_country, new_question);
             // Learn function to add the new country and its question into the file
             FILE * fptr = fopen("countries.txt","w+");
-            Write_BinTree(fptr,countries.root);
+            //Writing function to overwrite the file with the new changes
+            Write_BinTree(fptr,countries.root); 
+            // Close file
             fclose(fptr);
         }
         else {
