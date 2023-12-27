@@ -1,7 +1,8 @@
 extern void Write_BinTree(FILE *fPtr, Node * iterator);
-extern void learn(Node** root, char * new_country, char* new_question);
+extern void learn(Node** root, char* new_country, char* new_question);
 void intro(){ // welcome message that only initializes at first round
-    printf("Hello! Welcome to our game: \n");
+    printf("Hello! Welcome to our game\n");
+    printf("Think of a country, and we will guess it! \n");
     printf("---------------------------\n");
 }
 // Function to read a single character input and consume the newline
@@ -12,9 +13,20 @@ char getChoice() {
     return choice;
 }
 
-// Function to handle the end of the game
-void endGame() {
-    printf("Thanks for Playing <3\n");
+
+void credits(){
+    printf("---------------------------\n");
+    printf("This game was developed by:\n\n");
+    printf("Abdulrahman Abougendia  22-101194\n");
+    printf("SalahEldin El-Sayed     22-101188\n");
+    printf("Kareem Yasser           22-101124\n");
+    printf("Fouad Hashesh           22-101062\n");
+    printf("Ibrahim Ehab            22-101281\n");
+    printf("Mohamed Farouk          22-101284\n");
+}
+void endGame() {    // Function to handle the end of the game
+    printf("\nThanks for Playing <3\n");
+    credits();
     // exit(0);
 }
 
