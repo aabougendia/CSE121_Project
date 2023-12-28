@@ -4,6 +4,8 @@
 #include <string.h>
 #include <ctype.h>
 #include <gtk/gtk.h>
+#include <unistd.h>
+
 /////////////////////////  our header files
 #include "binary_tree.h"
 #include "play.h"
@@ -14,6 +16,8 @@ static void start_game(GtkWidget *widget, gpointer data);
 
 GtkWidget *output_label;
 GtkWidget *start_button,*credits_button,*yes_button, *no_button;
+
+int is_game_over = 0;
 
 void play(Node* root, Node* original, GtkWidget *output_label);
 
@@ -31,7 +35,7 @@ int main(int argc, char *argv[]) {
     // Create main window
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(GTK_WINDOW(window), "Country Guessing Game");
-    gtk_window_set_default_size(GTK_WINDOW(window), 500, 600);
+    gtk_window_set_default_size(GTK_WINDOW(window), 400, 400);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
     // Vertical box for layout
@@ -40,7 +44,8 @@ int main(int argc, char *argv[]) {
     gtk_container_add(GTK_CONTAINER(window), vbox);
 
     // Output label with larger font
-    output_label = gtk_label_new("Welcome to the Country Guessing Game!");
+    output_label = gtk_label_new("");
+    intro(output_label);
     PangoFontDescription *font_desc = pango_font_description_from_string("Sans Bold 14");
     gtk_widget_modify_font(output_label, font_desc);
     gtk_box_pack_start(GTK_BOX(vbox), output_label, TRUE, TRUE, 0);
@@ -74,19 +79,29 @@ int main(int argc, char *argv[]) {
 
 // Signal handler for the Yes button
 static void on_yes_clicked(GtkWidget *widget, gpointer data) {
-    if (current_root != NULL) {
+    if (is_game_over) {
+        // Restart the game
+        current_root = original_root;
+        play(original_root, original_root, output_label);
+        is_game_over = 0; // Reset the game over flag
+    } else if (current_root != NULL) {
+        // Continue the game
         current_root = current_root->y;
         play(current_root, original_root, output_label);
     }
 }
 
-// Signal handler for the No button
 static void on_no_clicked(GtkWidget *widget, gpointer data) {
-    if (current_root != NULL) {
+    if (is_game_over) {
+        // End the game
+        gtk_main_quit();
+    } else if (current_root != NULL) {
+        // Continue the game
         current_root = current_root->n;
         play(current_root, original_root, output_label);
     }
 }
+
 
 // Callback function for the guess button
 static void credits(GtkWidget *widget, gpointer data) {
@@ -119,3 +134,4 @@ static void start_game(GtkWidget *widget, gpointer data) {
     current_root = countries.root;
     play(current_root, original_root, output_label);
 }
+
