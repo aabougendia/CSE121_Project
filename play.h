@@ -27,13 +27,13 @@ void endGame() {    // Function to handle the end of the game
  }
 
 // Play function - recursive approach to traverse the tree based on user input
-void play(Node* iterator, Node* original, Binary_tree countries) {
+void play(Node* iterator, Node* root) {
      // Check if there is no tree and terminate if true
-    if (iterator == NULL || original == NULL) {
+    if (iterator == NULL || root == NULL) {
         fprintf(stderr, "Error: Null pointer provided to play function.\n");
         exit(1);
     }
-    if(iterator == original){ // welcome function
+    if(iterator == root){ // welcome function
         intro();
     }
      char ans; // A variable to get any user input
@@ -59,7 +59,7 @@ void play(Node* iterator, Node* original, Binary_tree countries) {
             // Learn function to add the new country and its question into the file
             FILE * fptr = fopen("countries.txt","w+");
             //Writing function to overwrite the file with the new changes
-            Write_BinTree(fptr,countries.root); 
+            Write_BinTree(fptr, root);
             // Close file
             fclose(fptr);
         }
@@ -73,7 +73,7 @@ void play(Node* iterator, Node* original, Binary_tree countries) {
         ans = getChoice();
 
           if (ans == 'y') {
-            play(original, original, countries); // replay the game
+            play(root, root); // replay the game
         }else if (ans == 'n') {
                 endGame(); // end of game function
           }
@@ -89,9 +89,9 @@ void play(Node* iterator, Node* original, Binary_tree countries) {
         ans = getChoice();
 
         if (ans == 'y') {
-            play(iterator->y, original, countries);
+            play(iterator->y, root  );
         } else if (ans == 'n') {
-            play(iterator->n, original, countries);
+            play(iterator->n, root);
         } else {
             printf("Invalid input, Please try again!\n");
             goto label; // try again from current node
