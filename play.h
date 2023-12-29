@@ -1,76 +1,44 @@
-char countries[100][50] = {
-        "Nigeria",
-        "Namibia",
-        "Argentina",
-        "Brazil",
-        "Maldives",
-        "New Zealand",
-        "Saudi Arabia",
-        "Democratic Republic of Congo",
-        "Norway",
-        "Sweden",
-        "Hungary",
-        "England",
-        "Palestine",
-        "Egypt",
-        "United States of America",
-        "Japan"
-};
-
-// Display a welcome message that only initializes at the first round
-int numberOfCountries();
+// used extern to ger the 2 functions from learn.h
+extern void Write_BinTree(FILE *fPtr, Node * iterator);
+extern void learn(Node** root, char* new_country, char* new_question);
 extern int is_game_over;
-void intro(GtkWidget *output_label);
-void play(Node* root, Node* original, GtkWidget *output_label);
 
-// Main game functions
-int numberOfCountries() {
-    int i;
-    for (i = 0; i < 100; ++i) {
-        if (countries[i][0] == '\0')
-            break;
-    }
-    return i;
+
+extern Node *current_root, *original_root;
+
+
+void endGame() {    // Function to handle the end of the game
+    printf("\nThanks for Playing <3\n");
+    printf("---------------------------\n");
+    printf("This game was developed by:\n\n");
+    printf("Abdulrahman Abougendia  22-101194\n");
+    printf("SalahEldin El-Sayed     22-101188\n");
+    printf("Kareem Yasser           22-101124\n");
+    printf("Fouad Hashesh           22-101062\n");
+    printf("Ibrahim Ehab            22-101281\n");
+    printf("Mohamed Farouk          22-101284\n");
 }
 
-void intro(GtkWidget *output_label) {
-    char intro_text[1024] = "Hello, Welcome to our game!\n\n";
-    char country_list[1024] = "Our game currently consists of the following countries:\n\n";
+// Play function - recursive approach to traverse the tree based on user input
 
-    for (int i = 0; i < numberOfCountries(); ++i) {
-        strcat(country_list, countries[i]);
-        strcat(country_list, "\n");
+void play(Node* iterator, Node* original, GtkWidget *output_label) {
+    if (iterator == NULL || original == NULL) {
+        fprintf(stderr, "Error: Null pointer provided to play function.\n");
+        exit(1);
     }
 
-    strcat(intro_text, country_list);
-    strcat(intro_text, "\nPress 'Start Game' to begin.\n");
-    gtk_label_set_text(GTK_LABEL(output_label), intro_text);
-
-}
-
-void play(Node* root, Node* original, GtkWidget *output_label) {
-    if (root == NULL) {
-        fprintf(stderr, "Error: Reached a null node in the tree.\n");
-        return;
-    }
-
-    if (root == original) {
-        intro(output_label);
-
-    }
-
-    if (root->y == NULL && root->n == NULL) {  // Leaf node
+    // Additional checks for corrupted or uninitialized nodes
+    if (iterator->y == NULL && iterator->n == NULL) {  // Leaf node - guess the country
         is_game_over = 1;
         char end_game_msg[256];
-        sprintf(end_game_msg, "The game is over!\nYour country was: %s\n\nDo you want to play again?", root->data);
+        snprintf(end_game_msg, sizeof(end_game_msg), "Is your country %s?", iterator->data);
         gtk_label_set_text(GTK_LABEL(output_label), end_game_msg);
-        //end_game_choice(end_game_msg, original);
-        return;
-    } else {  // Non-leaf node
+    } else if (iterator->y != NULL && iterator->n != NULL) {  // Non-leaf node - ask question
         char question[256];
-        sprintf(question, "%s", root->data);
+        snprintf(question, sizeof(question), "%s", iterator->data);
         gtk_label_set_text(GTK_LABEL(output_label), question);
+    } else {
+        fprintf(stderr, "Error: Corrupted node in the binary tree.\n");
+        exit(1);
     }
 }
-
-
