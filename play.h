@@ -2,6 +2,7 @@
 extern void Write_BinTree(FILE *fPtr, Node * iterator);
 extern void learn(Node** root, char* new_country, char* new_question);
 void intro(){ // welcome message that only initializes at first round
+    printf("---------------------------\n");
     printf("Hello! Welcome to our game\n");
     printf("Think of a country, and we will guess it! \n");
     printf("---------------------------\n");
