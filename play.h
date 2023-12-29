@@ -1,4 +1,4 @@
-// used extern to ger the 2 functions from learn.h
+// used extern to get the 2 functions from learn.h
 extern void Write_BinTree(FILE *fPtr, Node * iterator);
 extern void learn(Node** root, char* new_country, char* new_question);
 void intro(){ // welcome message that only initializes at first round
@@ -13,24 +13,12 @@ char getChoice() {
     while (getchar() != '\n'); // Clear the input buffer
     return choice;
 }
-
-
-void credits(){
-    printf("---------------------------\n");
-    printf("This game was developed by:\n\n");
-    printf("Abdulrahman Abougendia  22-101194\n");
-    printf("SalahEldin El-Sayed     22-101188\n");
-    printf("Kareem Yasser           22-101124\n");
-    printf("Fouad Hashesh           22-101062\n");
-    printf("Ibrahim Ehab            22-101281\n");
-    printf("Mohamed Farouk          22-101284\n");
-}
 void endGame() {    // Function to handle the end of the game
     printf("\nThanks for Playing <3\n");
     printf("---------------------------\n");
     printf("This game was developed by:\n\n");
     printf("Abdulrahman Abougendia  22-101194\n");
-    printf("SalahEldin El-Sayed     22-101188\n");
+    printf("Salah El-Sayed          22-101188\n");
     printf("Kareem Yasser           22-101124\n");
     printf("Fouad Hashesh           22-101062\n");
     printf("Ibrahim Ehab            22-101281\n");
@@ -59,10 +47,10 @@ void play(Node* iterator, Node* original, Binary_tree countries) {
             printf("Got it!\n"); // Correct answer
         } else if (ans == 'n') { // wrong asnwer
             printf("What was the country you were thinking of ? : ");
-            char* new_country = (char*)malloc(MAX_LINE_SIZE * sizeof(char*));
+            char* new_country = (char*)malloc(MAX_LINE_SIZE * sizeof(char));
             gets(new_country); // get new_country from the user
             printf("What question should I have asked ? : ");
-            char* new_question = (char*)malloc(MAX_LINE_SIZE * sizeof(char*));
+            char* new_question = (char*)malloc(MAX_LINE_SIZE * sizeof(char));
             gets(new_question);// get new_question from the user
             printf("OK!\n");
 
