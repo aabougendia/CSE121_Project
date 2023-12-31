@@ -20,6 +20,7 @@
       </ul>
     </li>
     <li><a href="#key-learnings">Key learnings</a></li>
+    <li><a href="#documentation">Documentation</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#credits">Credits</a></li>
   </ol>
@@ -62,6 +63,9 @@ The Country Guessing Game is implemented using C programming language. The proje
 - Recursion (DFS)
 - FILE I/O
 
+### Documentation
+
+[Documentation](https://drive.google.com/file/d/1-U57g7nLE5EgDWntP1lrRP-ET1LCCuBe/view?usp=drive_link)
 
 ### Contributing
 If you're interested in contributing to the project, feel free to fork the repository, make improvements, and submit a pull request. We welcome contributions that enhance the game's content, functionality, or overall user experience.
