@@ -34,12 +34,10 @@ Welcome to the Country Guessing Game! This project is a fun and educational game
 The Country Guessing Game is a command-line-based application that prompts users with questions related to various countries. Players are presented with clues such as capital cities, landmarks, or interesting facts, and they must guess the country associated with each set of clues. The game is designed to be interactive and engaging, providing an enjoyable experience for users of all ages.
 
 ### Features
-
-- **Diverse Questions:** The game covers a wide range of topics, including geography, history, and culture, to ensure a comprehensive learning experience.
   
-- **Scoring System:** Players earn points based on the accuracy and speed of their answers, creating a competitive element for those looking to challenge themselves or others.
+- **Smart Learning : ** With every answer the game gets wrong, the program learns from its mistakes by asking the user the question that should have been asked and the right answer.
 
-- **Randomized Questions:** The order and selection of questions are randomized, ensuring a unique experience each time the game is played.
+- **GUI:**The game is equipped with a GUI built with GTK3.
 
 
 ### Built With
