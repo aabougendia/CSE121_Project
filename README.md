@@ -35,9 +35,9 @@ The Country Guessing Game is a command-line-based application that prompts users
 
 ### Features
   
-- **Smart Learning : ** With every answer the game gets wrong, the program learns from its mistakes by asking the user the question that should have been asked and the right answer.
+-  Smart Learning :   With every answer the game gets wrong, the program learns from its mistakes by asking the user the question that should have been asked and the right answer.
 
-- **GUI:**The game is equipped with a GUI built with GTK3.
+- GUI : The game is equipped with a GUI built with GTK3.
 
 
 ### Built With
