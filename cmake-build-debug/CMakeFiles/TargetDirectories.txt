@@ -1,3 +1,0 @@
-/Users/FouadAhmed/Documents/Uni/Term 2/Advanced Programming/project/CSE121_Project/cmake-build-debug/CMakeFiles/CSE121_Project.dir
-/Users/FouadAhmed/Documents/Uni/Term 2/Advanced Programming/project/CSE121_Project/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/FouadAhmed/Documents/Uni/Term 2/Advanced Programming/project/CSE121_Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
